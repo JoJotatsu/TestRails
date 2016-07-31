@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   match ':controller(/:action(/:id))', via: [ :get, :post, :patch]
 
   get '/blogs/:user_id' => 'blogs#index'
+
+  root to: 'books#index'
 end
