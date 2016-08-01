@@ -6,4 +6,11 @@ class HelloControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "list action" do
+    get :list
+    assert_equal 10, assigns(:book).length, 'found rows is wrong'
+    assert_response :success, 'list axtion failed'
+    assert_template 'hello/list'
+  end
+
 end
