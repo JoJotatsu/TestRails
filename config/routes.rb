@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   get '/blogs/:user_id' => 'blogs#index'
 
   root to: 'books#index'
+  
 end
